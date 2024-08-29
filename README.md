@@ -1,5 +1,6 @@
 #Запуск приложения
 export FLASK_APP=app.py     # На Windows: set FLASK_APP=app.py
+
 flask run
 
 

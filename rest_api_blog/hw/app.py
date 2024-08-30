@@ -1,6 +1,6 @@
 import json
 from flask import Flask, jsonify, request, abort
-from hw.models.models import User, Post
+from hw.model.models import User, Post
 
 app = Flask(__name__)
 

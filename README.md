@@ -23,14 +23,19 @@ curl http://127.0.0.1:5000/users/1 -X GET -H "Content-Type: application/json" -d
 #4. Создание нового поста
 curl http://127.0.0.1:5000/posts -X POST -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content", "author": {"id": 1, "username": "user1"}}'
 
-
-#5.Получение списка поста
+#4.1.Получение списка поста
 curl http://127.0.0.1:5000/posts/1 -X GET -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content", "author": {"id": 1, "username": "user1"}}'
 
 
-#6.Редактирование поста
+#5.Редактирование поста
 curl http://127.0.0.1:5000/posts -X PUT -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'
 
+#5.1.Получение редактированного поста
+curl http://127.0.0.1:5000/posts/1 -X GET -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'
 
-#7.Удаление поста
+
+#6.Удаление поста
 curl http://127.0.0.1:5000/posts/1 -X DELETE -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'
+
+#6.1. Получение удаленного поста
+curl http://127.0.0.1:5000/posts/1 -X GET -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'

@@ -28,7 +28,7 @@ curl http://127.0.0.1:5000/posts/1 -X GET -H "Content-Type: application/json" -d
 
 
 #5.Редактирование поста
-curl http://127.0.0.1:5000/posts -X PUT -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'
+curl http://127.0.0.1:5000/posts/1 -X PUT -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'
 
 #5.1.Получение редактированного поста
 curl http://127.0.0.1:5000/posts/1 -X GET -H "Content-Type: application/json" -d '{"id": 1, "title": "My First Post", "content": "This is the content editing", "author": {"id": 1, "username": "user1"}}'

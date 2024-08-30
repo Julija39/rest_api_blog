@@ -7,6 +7,7 @@ flask run
 
 
 #Тестирование API с помощью cURL
+
 #1. Создание нового пользователя  
 curl http://127.0.0.1:5000/users -X POST -H "Content-Type: application/json" -d '{"username": "user1"}'
 
